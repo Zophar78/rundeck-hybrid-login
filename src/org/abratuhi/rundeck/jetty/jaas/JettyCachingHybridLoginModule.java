@@ -43,7 +43,7 @@ public class JettyCachingHybridLoginModule extends JettyCachingLdapLoginModule {
 	
 	public UserInfo getUserInfo(String username) throws Exception {
         
-        String pwdCredential = getUserCredentials(username);
+        String pwdCredential = getUserCredentials(username.toLowerCase());
 
         if (pwdCredential == null) {
             return null;
@@ -52,7 +52,7 @@ public class JettyCachingHybridLoginModule extends JettyCachingLdapLoginModule {
         pwdCredential = convertCredentialLdapToJetty(pwdCredential);
 
         Credential credential = Credential.getCredential(pwdCredential);
-        org.abratuhi.rundeck.jetty.jaas.UserInfo localUserInfo = propfileModule.getUserInfo(username);
+        org.abratuhi.rundeck.jetty.jaas.UserInfo localUserInfo = propfileModule.getUserInfo(username.toLowerCase());
 
         return new UserInfo(username, credential, localUserInfo.getRoleNames());
     }
@@ -67,7 +67,7 @@ public class JettyCachingHybridLoginModule extends JettyCachingLdapLoginModule {
     NamingException {
 		List result;
 		try{
-			org.abratuhi.rundeck.jetty.jaas.UserInfo localUserInfo = propfileModule.getUserInfo(username);
+			org.abratuhi.rundeck.jetty.jaas.UserInfo localUserInfo = propfileModule.getUserInfo(username.toLowerCase());
 			result = localUserInfo.getRoleNames();
 		}
 		catch(Exception e){
