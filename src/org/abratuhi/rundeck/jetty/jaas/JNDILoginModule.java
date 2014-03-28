@@ -24,8 +24,8 @@
 package org.abratuhi.rundeck.jetty.jaas;
 
 import org.apache.log4j.Logger;
-import org.mortbay.jetty.security.Credential;
-import org.mortbay.jetty.plus.jaas.callback.ObjectCallback;
+import org.eclipse.jetty.util.security.Credential;
+import org.eclipse.jetty.plus.jaas.callback.ObjectCallback;
 
 import javax.security.auth.Subject;
 import javax.security.auth.login.LoginException;

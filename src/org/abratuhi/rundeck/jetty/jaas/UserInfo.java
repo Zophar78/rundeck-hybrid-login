@@ -16,7 +16,7 @@
 
 package org.abratuhi.rundeck.jetty.jaas;
 
-import org.mortbay.jetty.security.Credential;
+import org.eclipse.jetty.util.security.Credential;
 
 import java.util.ArrayList;
 import java.util.List;

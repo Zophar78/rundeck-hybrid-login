@@ -17,7 +17,7 @@
 package org.abratuhi.rundeck.jetty.jaas;
 
 import org.apache.log4j.Logger;
-import org.mortbay.jetty.security.Credential;
+import org.eclipse.jetty.util.security.Credential;
 
 import javax.security.auth.Subject;
 import javax.security.auth.callback.CallbackHandler;
@@ -147,7 +147,7 @@ public class PropertyFileLoginModule extends AbstractLoginModule
     /** 
      * Don't implement this as we want to pre-fetch all of the
      * users.
-     * @see org.mortbay.jetty.plus.jaas.spi.AbstractLoginModule#lazyLoadUser(java.lang.String)
+     * @see org.eclipse.jetty.plus.jaas.spi.AbstractLoginModule#lazyLoadUser(java.lang.String)
      * @param username
      * @throws Exception
      */

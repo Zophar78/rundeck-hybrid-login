@@ -26,8 +26,8 @@ import javax.security.auth.Subject;
 import javax.security.auth.callback.CallbackHandler;
 import javax.security.auth.login.LoginException;
 
-import org.mortbay.jetty.plus.jaas.spi.UserInfo;
-import org.mortbay.jetty.security.Credential;
+import org.eclipse.jetty.plus.jaas.spi.UserInfo;
+import org.eclipse.jetty.util.security.Credential;
 
 public class JettyCachingHybridLoginModule extends JettyCachingLdapLoginModule {
 	

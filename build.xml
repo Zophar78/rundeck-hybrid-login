@@ -1,6 +1,6 @@
 <project name="Rundeck Hybrid Login Module extension" default="build" basedir=".">
 	<property name="app.name" value="rundeck-hybrid-login-ext" />
-	<property name="app.version" value="0.1" />
+	<property name="app.version" value="0.2" />
 
 	<property name="dir.src" value="src" />
 	<property name="dir.lib" value="lib" />
@@ -23,7 +23,7 @@
 	</target>
 
 	<target name="build" depends="clean, prepare">
-		<javac target="1.5" srcdir="${dir.src}" destdir="${dir.build.classes}" debug="true">
+		<javac target="1.7" srcdir="${dir.src}" destdir="${dir.build.classes}" debug="true">
 			<classpath refid="compile.classpath" />
 		</javac>
 
@@ -34,6 +34,5 @@
 			</manifest>
 		</jar>
 	</target>
-
 
 </project>

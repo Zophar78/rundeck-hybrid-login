@@ -17,12 +17,9 @@
 package org.abratuhi.rundeck.jetty.jaas;
 
 import org.apache.log4j.Logger;
-import org.mortbay.jetty.plus.jaas.JAASPrincipal;
-import org.mortbay.jetty.plus.jaas.JAASRole;
-import org.mortbay.jetty.plus.jaas.callback.ObjectCallback;
-//import org.mortbay.jaas.JAASPrincipal;
-//import org.mortbay.jaas.JAASRole;
-//import org.mortbay.jaas.callback.ObjectCallback;
+import org.eclipse.jetty.plus.jaas.JAASPrincipal;
+import org.eclipse.jetty.plus.jaas.JAASRole;
+import org.eclipse.jetty.plus.jaas.callback.ObjectCallback;
 
 import javax.security.auth.Subject;
 import javax.security.auth.callback.Callback;
