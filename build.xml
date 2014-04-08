@@ -33,6 +33,7 @@
 				<attribute name="Version" value="${app.version}"/>
 			</manifest>
 		</jar>
+		<copy file="${dir.lib}/jetty-util-7.6.0.v20120127.jar" tofile="${dir.build}/jetty-util-7.6.0.jar"/>
 	</target>
 
 </project>
